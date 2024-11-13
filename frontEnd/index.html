@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="container">
+        <div id="side">
+            <div id="sideTitle">
+                <h1 id="h1">É muito bom te ter de volta</h1>
+                <p id="sideTitleP">Faça login para poder usar nosso site</p>
+            </div>
+            <div id="sideImg">
+                <img src="assets/images/logCadSvg.svg" alt="">
+            </div>
+        </div>
+        <div id="logCadSide">
+            <div id="logCadTitle">
+                <h1 id="loginCadSideTitle">Login</h1>
+            </div>
+            <div id="logCadMain">
+                <div class="inputLine">
+                    <img src="assets/images/user-solid.svg" alt="">
+                    <input type="text" placeholder="Digite seu email" id='emailInput'>
+                </div>
+                <div class="inputLinePass">
+                    <img src="assets/images/lock-solid.svg" alt="">
+                    <input type="password" placeholder="Digite sua senha" id="passInput">
+                    <img src="assets/images/eye-slash-solid.svg" alt="" id="eyeIcon" onclick="toggleEye()">
+                </div>
+                <div id="logCadFooter">
+                    <button id="button" onclick="verify()">Logar</button>
+                    <p id="p">ainda não tem uma conta? <span onclick="toggleType()">Clique aqui.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
