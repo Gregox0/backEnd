@@ -58,6 +58,24 @@ function verify(){
         inputLinePass.style.borderColor = 'red'
         return
     }
+    fetch('http://localhost:7777/cad', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email: emailInput.value,
+            password: passInput.value
+        })
+    }).then(response => response.json()).then(data => {
+        if(data.message == 'logado'){
+            console.log('tudo certo')
+        }else{
+            console.log('tudo errado')
+        }
+    }).catch(error => {
+        console.log('error:', error)
+    })
       emailInput.value = ''
       passInput.value = ''
 }
